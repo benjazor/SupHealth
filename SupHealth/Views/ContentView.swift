@@ -18,7 +18,7 @@ struct ContentView: View {
             VStack(alignment: .leading) {
                 Text("Some information")
                     .bold()
-                    .font(.mainTitle)
+                    .font(.title)
                 Text("Bite")
                 Spacer().frame(maxWidth: .infinity)
             }

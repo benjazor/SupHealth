@@ -20,8 +20,9 @@ struct CountryItemView: View {
         HStack() {
             
             // Country flag
-            Image(systemName: "rectangle.fill")
+            Image(country.CountryCode)
                 .resizable()
+                .cornerRadius(8.0)
                 .scaledToFit()
                 .frame(width: 64.0)
             
