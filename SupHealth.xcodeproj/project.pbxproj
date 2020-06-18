@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,16 @@
 		41346D232496560900C24694 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41346D222496560900C24694 /* Assets.xcassets */; };
 		41346D262496560900C24694 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41346D252496560900C24694 /* Preview Assets.xcassets */; };
 		41346D292496560900C24694 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41346D272496560900C24694 /* LaunchScreen.storyboard */; };
+		41346D312496638600C24694 /* FlagKit.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41346D302496638600C24694 /* FlagKit.xcassets */; };
+		41346D35249688A900C24694 /* CountryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41346D34249688A900C24694 /* CountryModel.swift */; };
+		41636ADF24977D0700FA550F /* SwiftUIPullToRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 41636ADE24977D0700FA550F /* SwiftUIPullToRefresh */; };
+		419505AA24979E0600D58886 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 419505A924979E0600D58886 /* SwiftUIRefresh */; };
+		419505AE2499541700D58886 /* CountriesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419505AD2499541700D58886 /* CountriesViewModel.swift */; };
+		419505B12499590F00D58886 /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419505B02499590F00D58886 /* DetailsView.swift */; };
+		419505B32499634200D58886 /* CountryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419505B22499634200D58886 /* CountryListView.swift */; };
+		419505B5249A1C2D00D58886 /* CountryItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419505B4249A1C2D00D58886 /* CountryItemView.swift */; };
+		419505B7249A201900D58886 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419505B6249A201900D58886 /* ResponseModel.swift */; };
+		419505B9249A203600D58886 /* GlobalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419505B8249A203600D58886 /* GlobalModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +34,14 @@
 		41346D252496560900C24694 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41346D282496560900C24694 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41346D2A2496560900C24694 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41346D302496638600C24694 /* FlagKit.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = FlagKit.xcassets; path = ../../../Desktop/FlagKit.xcassets; sourceTree = "<group>"; };
+		41346D34249688A900C24694 /* CountryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryModel.swift; sourceTree = "<group>"; };
+		419505AD2499541700D58886 /* CountriesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountriesViewModel.swift; sourceTree = "<group>"; };
+		419505B02499590F00D58886 /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		419505B22499634200D58886 /* CountryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryListView.swift; sourceTree = "<group>"; };
+		419505B4249A1C2D00D58886 /* CountryItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryItemView.swift; sourceTree = "<group>"; };
+		419505B6249A201900D58886 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
+		419505B8249A203600D58886 /* GlobalModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				419505AA24979E0600D58886 /* SwiftUIRefresh in Frameworks */,
+				41636ADF24977D0700FA550F /* SwiftUIPullToRefresh in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,10 +76,13 @@
 		41346D1B2496560800C24694 /* SupHealth */ = {
 			isa = PBXGroup;
 			children = (
+				419505AF249958F600D58886 /* Views */,
+				419505AC249953FA00D58886 /* ViewModels */,
+				419505AB249953DE00D58886 /* Models */,
 				41346D1C2496560800C24694 /* AppDelegate.swift */,
 				41346D1E2496560800C24694 /* SceneDelegate.swift */,
-				41346D202496560800C24694 /* ContentView.swift */,
 				41346D222496560900C24694 /* Assets.xcassets */,
+				41346D302496638600C24694 /* FlagKit.xcassets */,
 				41346D272496560900C24694 /* LaunchScreen.storyboard */,
 				41346D2A2496560900C24694 /* Info.plist */,
 				41346D242496560900C24694 /* Preview Content */,
@@ -73,6 +96,35 @@
 				41346D252496560900C24694 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		419505AB249953DE00D58886 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				41346D34249688A900C24694 /* CountryModel.swift */,
+				419505B6249A201900D58886 /* ResponseModel.swift */,
+				419505B8249A203600D58886 /* GlobalModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		419505AC249953FA00D58886 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				419505AD2499541700D58886 /* CountriesViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		419505AF249958F600D58886 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41346D202496560800C24694 /* ContentView.swift */,
+				419505B02499590F00D58886 /* DetailsView.swift */,
+				419505B22499634200D58886 /* CountryListView.swift */,
+				419505B4249A1C2D00D58886 /* CountryItemView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -91,6 +143,10 @@
 			dependencies = (
 			);
 			name = SupHealth;
+			packageProductDependencies = (
+				41636ADE24977D0700FA550F /* SwiftUIPullToRefresh */,
+				419505A924979E0600D58886 /* SwiftUIRefresh */,
+			);
 			productName = SupHealth;
 			productReference = 41346D192496560800C24694 /* SupHealth.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +175,10 @@
 				Base,
 			);
 			mainGroup = 41346D102496560800C24694;
+			packageReferences = (
+				41636ADD24977D0700FA550F /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */,
+				419505A824979E0600D58886 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+			);
 			productRefGroup = 41346D1A2496560800C24694 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +195,7 @@
 			files = (
 				41346D292496560900C24694 /* LaunchScreen.storyboard in Resources */,
 				41346D262496560900C24694 /* Preview Assets.xcassets in Resources */,
+				41346D312496638600C24694 /* FlagKit.xcassets in Resources */,
 				41346D232496560900C24694 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,9 +207,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41346D35249688A900C24694 /* CountryModel.swift in Sources */,
+				419505B7249A201900D58886 /* ResponseModel.swift in Sources */,
+				419505B9249A203600D58886 /* GlobalModel.swift in Sources */,
 				41346D1D2496560800C24694 /* AppDelegate.swift in Sources */,
+				419505B32499634200D58886 /* CountryListView.swift in Sources */,
 				41346D1F2496560800C24694 /* SceneDelegate.swift in Sources */,
+				419505AE2499541700D58886 /* CountriesViewModel.swift in Sources */,
 				41346D212496560800C24694 /* ContentView.swift in Sources */,
+				419505B5249A1C2D00D58886 /* CountryItemView.swift in Sources */,
+				419505B12499590F00D58886 /* DetailsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +410,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		41636ADD24977D0700FA550F /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/SwiftUI-PullToRefresh";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		419505A824979E0600D58886 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		41636ADE24977D0700FA550F /* SwiftUIPullToRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41636ADD24977D0700FA550F /* XCRemoteSwiftPackageReference "SwiftUI-PullToRefresh" */;
+			productName = SwiftUIPullToRefresh;
+		};
+		419505A924979E0600D58886 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 419505A824979E0600D58886 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 41346D112496560800C24694 /* Project object */;
 }
