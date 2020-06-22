@@ -13,6 +13,7 @@ struct CountryItemView: View {
     
     var country: Country
     var isFavorite: Bool
+    @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
@@ -33,7 +34,10 @@ struct CountryItemView: View {
             
             // Favorite indicator
             if self.isFavorite {
-                Image(systemName: "star.fill").foregroundColor(.yellow)
+                Image(systemName: "star.fill")
+                    .foregroundColor(
+                        colorScheme != .dark ? Color(UIColor.systemYellow) : .yellow
+                    )
             }
         }
         

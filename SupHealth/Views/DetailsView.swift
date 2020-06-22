@@ -12,61 +12,41 @@ import SwiftUI
 struct DetailView: View {
     
     @EnvironmentObject var countriesVM : CountriesViewModel
+    @Environment(\.colorScheme) var colorScheme
     
     let country: Country
     @State var isFavorite : Bool
     
     var body: some View {
-        VStack(alignment: .leading) {
+        ScrollView(.vertical) {
             
-            HStack(spacing: 50) {
-                VStack() {
-                    Text(String(country.NewConfirmed))
-                        .font(.custom("AppleSDGothicNeo-Thin", size: 40))
-                    Text("New case\(country.NewConfirmed > 0 ? "s" : "")")
-                        .font(.headline)
-                }
-                VStack() {
-                    Text(String(country.TotalConfirmed))
-                        .font(.custom("AppleSDGothicNeo-Thin", size: 40))
-                    Text("Total case\(country.TotalConfirmed > 0 ? "s" : "")")
-                        .font(.headline)
-                }
-            }.frame(maxWidth: .infinity)
-            
-            HStack(spacing: 50) {
-                VStack() {
-                    Text(String(country.NewDeaths))
-                        .font(.custom("AppleSDGothicNeo-Thin", size: 40))
-                    Text("New death\(country.NewDeaths > 0 ? "s" : "")")
-                        .font(.headline)
-                }
-                VStack() {
-                    Text(String(country.TotalDeaths))
-                        .font(.custom("AppleSDGothicNeo-Thin", size: 40))
-                    Text("Total death\(country.TotalDeaths > 0 ? "s" : "")")
-                        .font(.headline)
-                }
-            }.frame(maxWidth: .infinity)
-            
-            HStack(spacing: 50) {
-                VStack() {
-                    Text(String(country.NewRecovered))
-                        .font(.custom("AppleSDGothicNeo-Thin", size: 40))
-                    Text("New recovered")
-                        .font(.headline)
-                }
-                VStack() {
-                    Text(String(country.TotalRecovered))
-                        .font(.custom("AppleSDGothicNeo-Thin", size: 40))
-                    Text("Total recovered")
-                        .font(.headline)
-                }
-            }.frame(maxWidth: .infinity)
-            
-            Spacer().frame(maxWidth: .infinity)
+            HStack {
+                Spacer()
             }
-        .padding(10)
+            
+            DetailItem(
+                labelText: "Cases",
+                totalNumber: country.TotalConfirmed,
+                dailyNumber: country.NewConfirmed,
+                color: Color(UIColor.systemPurple)
+            )
+            
+            DetailItem(
+                labelText: "Deaths",
+                totalNumber: country.TotalDeaths,
+                dailyNumber: country.NewDeaths,
+                color: Color(UIColor.systemRed)
+            )
+            
+            DetailItem(
+                labelText: "Recovered",
+                totalNumber: country.TotalRecovered,
+                dailyNumber: country.NewRecovered,
+                color: Color(UIColor.systemGreen)
+            )
+            
+        }
+        .padding([.top, .horizontal])
         .navigationBarTitle(country.Country)
         .navigationBarItems(trailing:
             Button(action: {
@@ -81,9 +61,12 @@ struct DetailView: View {
                     .resizable()
                     .scaledToFit()
                     .frame(width: 32.0)
-                    .foregroundColor(.yellow)
+                    .foregroundColor(
+                        isFavorite ?
+                            (colorScheme == .dark ? Color(UIColor.systemYellow) : .yellow):
+                            Color(UIColor.systemGray3)
+                    )
             }
-            
         )
     }
 }
