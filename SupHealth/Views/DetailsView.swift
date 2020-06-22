@@ -18,6 +18,7 @@ struct DetailView: View {
     
     var body: some View {
         VStack(alignment: .leading) {
+            
             HStack(spacing: 50) {
                 VStack() {
                     Text(String(country.NewConfirmed))

@@ -7,12 +7,17 @@
 //
 
 import Foundation
+import SwiftUI
 
 class CountriesViewModel: ObservableObject {
     
     // Published variables
     @Published var countries: [Country] = []
-    @Published var favorties: [String] = []
+    @Published var favorties: [String] = UserDefaults.standard.array(forKey: "Favorites") as? [String] ?? [] as [String] {
+        didSet {
+            UserDefaults.standard.set(self.favorties, forKey: "Favorites")
+        }
+    }
     
     // Fetch countries when application Starts
     init() {
