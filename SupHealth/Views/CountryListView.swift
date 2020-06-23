@@ -19,7 +19,9 @@ struct CountryListView: View {
     private func getFavoriteFilteredCountryArray() -> [Country] {
         return !self.showFavorites ?
             countriesVM.countries :
-            countriesVM.countries.filter { self.countriesVM.favorties.contains($0.CountryCode) }
+            countriesVM.countries.filter { self.countriesVM.favorties.contains($0.CountryCode)
+                
+            }
     }
     
     // Returns a boolean value telling us is the country is vaforite or not
