@@ -30,4 +30,4 @@ You can filter your favorites countries in the country list tab by using the tog
 - [x] Details View : Design
 - [X] Home View : Create View
 - [X] Home View : Design
-- [ ] Details View : Share button
+- [X] Details View : Share button
