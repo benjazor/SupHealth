@@ -9,7 +9,7 @@
 import Foundation
 
 // Global data
-struct Glob: Codable {
+struct Global: Codable {
     let NewConfirmed: Int
     let TotalConfirmed: Int
     let NewDeaths: Int

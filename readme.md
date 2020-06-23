@@ -16,7 +16,7 @@ On the country list view you can access the list of countries and easily filter 
 On the details view you can view all the data from a single country and add or remove it from your favorites.  
 (photo)
 
-## Feature
+## Features
 ### Add / Remove favorites
 You can toggle countries to your favorites through the star toggle on the details view.  
 (photo + arrow)
@@ -27,6 +27,7 @@ You can filter your favorites countries in the country list tab by using the tog
 
 
 ## To Do List
-- [ ] Details View : Design
-- [ ] Home View : Design
+- [x] Details View : Design
+- [X] Home View : Create View
+- [X] Home View : Design
 - [ ] Details View : Share button

@@ -10,7 +10,7 @@ import Foundation
 
 // API response
 struct Response: Codable {
-    let Global: Glob
+    let Global: Global
     let Countries: Array<Country>
     let Date: String
 }

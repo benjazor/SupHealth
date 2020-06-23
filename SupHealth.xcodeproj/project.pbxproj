@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		410028C124A233D100EFEC60 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 410028C024A233D100EFEC60 /* HomeView.swift */; };
 		41346D1D2496560800C24694 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41346D1C2496560800C24694 /* AppDelegate.swift */; };
 		41346D1F2496560800C24694 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41346D1E2496560800C24694 /* SceneDelegate.swift */; };
 		41346D212496560800C24694 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41346D202496560800C24694 /* ContentView.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410028C024A233D100EFEC60 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		41346D192496560800C24694 /* SupHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SupHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41346D1C2496560800C24694 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41346D1E2496560800C24694 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				419505B22499634200D58886 /* CountryListView.swift */,
 				419505B4249A1C2D00D58886 /* CountryItemView.swift */,
 				41978C7A24A1351A0061C21C /* DetailItem.swift */,
+				410028C024A233D100EFEC60 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -215,6 +218,7 @@
 				419505AE2499541700D58886 /* CountriesViewModel.swift in Sources */,
 				41346D212496560800C24694 /* ContentView.swift in Sources */,
 				41978C7B24A1351A0061C21C /* DetailItem.swift in Sources */,
+				410028C124A233D100EFEC60 /* HomeView.swift in Sources */,
 				419505B5249A1C2D00D58886 /* CountryItemView.swift in Sources */,
 				419505B12499590F00D58886 /* DetailsView.swift in Sources */,
 			);

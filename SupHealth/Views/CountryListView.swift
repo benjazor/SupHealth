@@ -55,11 +55,11 @@ struct CountryListView: View {
                     DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                         self.isRefreshing = false
                     }
-                    self.countriesVM.fetchCountries()
+                    self.countriesVM.fetchAPI()
                 }
             
                 // Navigation view Title
-                .navigationBarTitle(Text("Informations"))
+                .navigationBarTitle(Text("Countries"))
                     
                 // Navigation view Items
                 .navigationBarItems(trailing: HStack() {

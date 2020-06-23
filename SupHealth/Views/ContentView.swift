@@ -15,19 +15,12 @@ struct ContentView: View {
         TabView {
             
             // General View
-            VStack(alignment: .leading) {
-                Text("Some information")
-                    .bold()
-                    .font(.title)
-                Text("Bite")
-                Spacer().frame(maxWidth: .infinity)
-            }
-        .padding()
+            HomeView()
                 
                 // Tab Icon
                 .tabItem {
-                    Image(systemName: "house.fill")
-                    Text("General")
+                    Image(systemName: "globe")
+                    Text("Global")
                 }
             
             // Country List View
@@ -36,7 +29,7 @@ struct ContentView: View {
                 // Tab Icon
                 .tabItem {
                     Image(systemName: "list.dash")
-                    Text("List")
+                    Text("Countries")
                 }
         }
     }

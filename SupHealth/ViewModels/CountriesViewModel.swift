@@ -13,7 +13,7 @@ class CountriesViewModel: ObservableObject {
     
     // Published variables
     @Published var countries: [Country] = []
-    
+    @Published var global: Global?
     @Published var favorties: [String] = UserDefaults.standard.array(forKey: "Favorites") as? [String] ?? [] as [String] {
         didSet {
             UserDefaults.standard.set(self.favorties, forKey: "Favorites")
@@ -22,11 +22,11 @@ class CountriesViewModel: ObservableObject {
     
     // Fetch countries when application Starts
     init() {
-        fetchCountries()
+        fetchAPI()
     }
     
     // Update the countries property with the API data
-    func fetchCountries() {
+    func fetchAPI() {
         
         guard let url = URL( string:"https://api.covid19api.com/summary" ) else { return }
         
@@ -43,11 +43,12 @@ class CountriesViewModel: ObservableObject {
                 var decodedData: Response?
                 do {
                     decodedData = try JSONDecoder().decode(Response.self, from: data)
+                    self.countries = decodedData!.Countries
+                    self.global = decodedData!.Global
                 }
                 catch {
                     print("JSON conversion failed: \(error.localizedDescription)")
                 }
-                self.countries = decodedData!.Countries
             }
         }).resume() // Execute request
         

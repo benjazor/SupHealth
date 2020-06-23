@@ -28,7 +28,7 @@ struct DetailView: View {
                 labelText: "Cases",
                 totalNumber: country.TotalConfirmed,
                 dailyNumber: country.NewConfirmed,
-                color: Color(UIColor.systemPurple)
+                color: Color(UIColor.systemOrange)
             )
             
             DetailItem(
